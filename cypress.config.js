@@ -21,9 +21,9 @@ module.exports = defineConfig({
 			configFile: 'reporter-config.json',
 		},
 		env: {
-			webdriveruni_url: 'http://www.webdriveruniversity.com/',
-			automation_test_store_url: 'https://automationteststore.com/',
 			sauce_demo_url: 'https://www.saucedemo.com/',
+			valid_username: 'standard_user',
+			valid_password: 'secret_sauce',
 		},
 		viewportHeight: 1080,
 		viewportWidth: 1920,
