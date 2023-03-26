@@ -23,9 +23,12 @@ export default class SwagLabsLoginPage {
 
 	validateErrorOnLogin(expectedMsg) {
 		cy.log(expectedMsg);
-		cy.get('.error-message-container.error').should('be.visible');
-		cy.get('.error-button').should('be.visible');
+		cy.get('.error-message-container.error')
+			.should('be.visible')
+			.and('have.css', 'background-color', 'rgb(226, 35, 26)');
+		cy.get('.error-message-container.error').should('have.css', 'justify-content', 'center');
 		cy.get('[data-test="error"]').invoke('text').should('deep.equal', expectedMsg);
-		cy.get('.error-button').click();
+		cy.get('.error-button svg').should('have.css', 'overflow', 'visible');
+		cy.get('.error-button').should('be.visible').and('have.css', 'cursor', 'pointer').click();
 	}
 }
