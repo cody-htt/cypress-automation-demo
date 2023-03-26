@@ -7,8 +7,8 @@ module.exports = defineConfig({
 			on('file:preprocessor', cucumber());
 			// implement node event listeners here
 		},
-		specPattern: 'cypress/e2e/**/*.test.{js,feature}',
-		excludeSpecPattern: 'cypress/e2e/other/*.js',
+		specPattern: 'cypress/e2e/**/*.feature',
+		excludeSpecPattern: 'cypress/e2e/**/*.js',
 		chromeWebSecurity: false,
 		experimentalOriginDependencies: true,
 		defaultCommandTimeout: 10 * 1000,
