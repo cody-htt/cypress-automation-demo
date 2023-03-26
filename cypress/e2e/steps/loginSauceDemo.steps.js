@@ -10,11 +10,11 @@ Given('I go to Sauce Demo page', () => {
 	loginPage.validateLoginPage();
 });
 
-When('I enter username {word}', (username) => {
+When('I enter username {string}', (username) => {
 	loginPage.enterUsename(username);
 });
 
-And('I enter password {word}', (password) => {
+And('I enter password {string}', (password) => {
 	loginPage.enterPassword(password);
 });
 
@@ -28,6 +28,6 @@ Then('I will be redirected to Inventory Page', () => {
 	inventoryPage.validateCartButton();
 });
 
-Then('I got error message prompted {string}', (lockedOutMessage) => {
-	loginPage.validateErrorOnLogin(lockedOutMessage);
+Then('I got error message prompted {string}', (expectedMsg) => {
+	loginPage.validateErrorOnLogin(expectedMsg);
 });
