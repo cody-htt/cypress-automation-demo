@@ -1,0 +1,13 @@
+#Dependencies
+node_modules
+
+#Localfile
+.DS_Store
+
+#IDE
+.vscode
+
+#Report
+mochawesome-report
+cypress/results
+mochawesome.json
