@@ -1,6 +1,6 @@
 import { Before, Given, When, And, Then } from 'cypress-cucumber-preprocessor/steps';
-import SwagLabsLoginPage from '../../support/pageObjects/sauce-demo/SwagLabsLoginPage';
-import SwagLabsInventoryPage from '../../support/pageObjects/sauce-demo/SwagLabsInventoryPage';
+import SwagLabsLoginPage from '../../support/pageObjects/SwagLabsLoginPage';
+import SwagLabsInventoryPage from '../../support/pageObjects/SwagLabsInventoryPage';
 
 const loginPage = new SwagLabsLoginPage();
 const inventoryPage = new SwagLabsInventoryPage();
@@ -28,6 +28,6 @@ Then('I will be redirected to Inventory Page', () => {
 	inventoryPage.validateCartButton();
 });
 
-Then('I got error message prompted {word}', (expectedMsg) => {
-	loginPage.validateErrorOnLogin(expectedMsg);
+Then('I got error message prompted {string}', (lockedOutMessage) => {
+	loginPage.validateErrorOnLogin(lockedOutMessage);
 });
