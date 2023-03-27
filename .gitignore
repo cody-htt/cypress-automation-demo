@@ -11,3 +11,5 @@ node_modules
 mochawesome-report
 cypress/results
 mochawesome.json
+allure-results
+allure-reports

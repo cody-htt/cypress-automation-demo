@@ -5,17 +5,21 @@
 	"main": "index.js",
 	"scripts": {
 		"cypress:open": "npx cypress open",
-		"runAllTest:headless": "npx cypress run",
-		"runAllTest:headed": "npx cypress run --headed",
-		"runAllTest:chrome": "npx cypress run --browser chrome",
+		"runAllTest:headless": "npx cypress run --env allure=true",
+		"runAllTest:headed": "npx cypress run --headed --env allure=true",
+		"runAllTest:chrome": "npx cypress run --browser chrome --env allure=true",
 		"mochawesomeReport:create": "npx mochawesome-merge cypress/results/mochawesome/*.json > mochawesome.json && npx marge mochawesome.json",
 		"mochawesomeReport:clean": "rm -rf mochawesome-report/*",
-		"execAllTest:pack": "npm run mochawesomeReport:clean && npm run runAllTest:headless && npm run mochawesomeReport:create"
+		"allureOpen": "allure serve allure-results",
+		"allureReport": "allure generate allure-results --clean -o allure-reports",
+		"execAllTest:pack": "npm run mochawesomeReport:clean && npm run runAllTest:headless && npm run mochawesomeReport:create && npm run allureReport"
 	},
 	"author": "Tung Huynh",
 	"license": "ISC",
 	"devDependencies": {
 		"@cypress/xpath": "^2.0.3",
+		"@shelex/cypress-allure-plugin": "^2.37.0",
+		"allure-commandline": "^2.21.0",
 		"cypress": "^12.8.1",
 		"cypress-cucumber-preprocessor": "^4.3.1",
 		"cypress-multi-reporters": "^1.6.3",
