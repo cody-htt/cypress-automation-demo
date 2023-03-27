@@ -54,9 +54,24 @@ And('I remove all items in cart', () => {
 	cartPage.checkCartListIsEmpty();
 });
 
+And('I remove all added product within inventory page', () => {
+	inventoryPage.removeAddedProducts();
+	inventoryPage.validateNoProductAdded();
+});
+
+And('I go to my cart', () => {
+	headerComp.clickCartIcon();
+});
+
 /** Then Steps Definition */
 Then('I go back to inventory page for shopping', () => {
 	cartPage.clickBtnContShopping();
 	inventoryPage.validateInventoryPageUrl();
 	headerComp.validateCartBadgeIsEmpty();
+});
+
+Then('My cart is empty', () => {
+	cartPage.validateCartPageTitle();
+	cartPage.validateCartList();
+	cartPage.checkCartListIsEmpty();
 });
