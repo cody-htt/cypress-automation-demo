@@ -10,7 +10,7 @@ export default class HeaderComp {
 		cy.get('#react-burger-menu-btn').should('have.css', 'cursor', 'pointer');
 	}
 
-	validateCartBadge(productList) {
+	validateCartBadgeHasItem(productList) {
 		cy.get('.shopping_cart_badge')
 			.should('be.visible')
 			.and('have.css', 'box-sizing', 'border-box')
@@ -19,7 +19,15 @@ export default class HeaderComp {
 			.should('deep.equal', `${productList.length}`);
 	}
 
+	validateCartBadgeIsEmpty() {
+		cy.get('.shopping_cart_badge').should('not.exist');
+	}
+
 	validateCartButton() {
-		cy.get('#shopping_cart_container').should('be.visible');
+		cy.get('#shopping_cart_container').should('be.visible').and('have.css', 'display', 'block');
+	}
+
+	clickCartIcon() {
+		cy.get('#shopping_cart_container').click();
 	}
 }
