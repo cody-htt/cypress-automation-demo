@@ -26,6 +26,7 @@ Before(() => {
 	});
 });
 
+/** Given Steps Definition */
 Given('I have logged-in success and redirect to inventory page', () => {
 	headerComp.validateHeaderLogo();
 	headerComp.validateBurgerButton();
@@ -33,11 +34,13 @@ Given('I have logged-in success and redirect to inventory page', () => {
 	footerComp.validatePageFooter(footerCopyText);
 });
 
+/** When Steps Definition */
 When('I add multiple products to Cart', () => {
 	inventoryPage.addProductsToCart(productList);
 	headerComp.validateCartBadgeHasItem(productList);
 });
 
+/** And Steps Definition */
 And('I go to my cart and verify my desired products are added', () => {
 	headerComp.clickCartIcon();
 	cartPage.validateCartPageTitle();
@@ -51,6 +54,7 @@ And('I remove all items in cart', () => {
 	cartPage.checkCartListIsEmpty();
 });
 
+/** Then Steps Definition */
 Then('I go back to inventory page for shopping', () => {
 	cartPage.clickBtnContShopping();
 	inventoryPage.validateInventoryPageUrl();

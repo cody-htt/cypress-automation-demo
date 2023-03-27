@@ -14,15 +14,18 @@ Before(() => {
 	});
 });
 
+/** Given Steps Definition */
 Given('I go to Sauce Demo page', () => {
 	loginPage.visitLoginPage();
 	loginPage.validateLoginPage();
 });
 
+/** When Steps Definition */
 When('I enter username {string}', (username) => {
 	loginPage.enterUsename(username);
 });
 
+/** And Steps Definition */
 And('I enter password {string}', (password) => {
 	loginPage.enterPassword(password);
 });
@@ -31,6 +34,7 @@ And('I click Login button', () => {
 	loginPage.clickBtnLogin();
 });
 
+/** Then Steps Definition */
 Then('I will be redirected to Inventory Page', () => {
 	headerComp.validateHeaderLogo();
 	headerComp.validateBurgerButton();
