@@ -38,22 +38,6 @@ export default class SwagLabsCartPage {
 	}
 
 	/**
-	 * Check that the cart list has at least one item in it.
-	 */
-	checkCartListHasItem() {
-		cy.get('.cart_item').should('have.length.gt', 0);
-		cy.get('.cart_list').screenshot('Cart-with-items');
-	}
-
-	/**
-	 * Check that the cart list is empty.
-	 */
-	checkCartListIsEmpty() {
-		cy.get('.cart_item').should('have.length.lte', 0);
-		cy.get('.cart_list').screenshot('Cart-empty');
-	}
-
-	/**
 	 * This function validates the title of the cart page
 	 */
 	validateCartPageTitle() {
