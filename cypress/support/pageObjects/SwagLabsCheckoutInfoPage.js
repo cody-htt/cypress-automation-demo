@@ -88,7 +88,7 @@ export default class SwagLabsCheckoutInfoPage {
 		cy.get('.header_secondary_container').should('be.visible').and('have.css', 'display', 'flex');
 		cy.get('.header_secondary_container span').then(($el) => {
 			cy.wrap($el).invoke('text').should('deep.equal', 'Checkout: Your Information');
-			cy.wrap($el).screenshot('check-step-one-title');
+			cy.wrap($el).screenshot('checkout-step-one-title');
 		});
 	}
 }

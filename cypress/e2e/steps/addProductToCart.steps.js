@@ -27,13 +27,13 @@ And('I go to my cart and verify my desired products are added', () => {
 	headerComp.clickCartIcon();
 	cartPage.validateCartPageTitle();
 	cartPage.validateCartList();
-	cartPage.checkCartListHasItem();
+	cartListComp.checkCartListHasItem();
 	cartListComp.verifyProductsInfo(productList);
 });
 
 And('I remove all items in cart', () => {
 	cartPage.removeAllItems();
-	cartPage.checkCartListIsEmpty();
+	cartListComp.checkCartListIsEmpty();
 });
 
 And('I remove all added product within inventory page', () => {
@@ -55,5 +55,5 @@ Then('I go back to inventory page for shopping', () => {
 Then('My cart is empty', () => {
 	cartPage.validateCartPageTitle();
 	cartPage.validateCartList();
-	cartPage.checkCartListIsEmpty();
+	cartListComp.checkCartListIsEmpty();
 });
