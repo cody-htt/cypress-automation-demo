@@ -1,4 +1,4 @@
-Feature: Add Product and Verify Cart Summary
+Feature: User Add Product and Verify Cart Summary
 
   Scenario: Add product to cart and verify cart summary then remove all items
     Given I have logged-in success and redirect to inventory page

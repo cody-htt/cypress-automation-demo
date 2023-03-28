@@ -1,35 +1,5 @@
 export default class SwagLabsCartPage {
 	/**
-	 * It loops through each product in the productList array, and for each product, it loops through each
-	 * inventory item on the page, and if the inventory item's name matches the product's name, it
-	 * verifies that the inventory item's name, description, and price match the product's name,
-	 * description, and price
-	 * @param productList - This is the list of products that we want to verify.
-	 */
-	verifyProductsInfo(productList) {
-		productList.forEach((product) => {
-			cy.get('.inventory_item_name').each(($el, index) => {
-				if ($el.text().includes(product.name)) {
-					cy.get('.inventory_item_name')
-						.eq(index)
-						.invoke('text')
-						.should('deep.equal', product.name);
-
-					cy.get('.inventory_item_desc')
-						.eq(index)
-						.invoke('text')
-						.should('deep.equal', product.description);
-
-					cy.get('.inventory_item_price')
-						.eq(index)
-						.invoke('text')
-						.should('deep.equal', product.price);
-				}
-			});
-		});
-	}
-
-	/**
 	 * It loops through all the buttons on the page, and if the button text includes the word "Remove", it
 	 * clicks the button
 	 */
@@ -50,6 +20,19 @@ export default class SwagLabsCartPage {
 				.should('have.descendants', 'img')
 				.invoke('text')
 				.should('deep.equal', 'Continue Shopping');
+			cy.wrap($el).click();
+		});
+	}
+
+	clickBtnCheckout() {
+		cy.get('#checkout').then(($el) => {
+			cy.wrap($el)
+				.should('be.visible')
+				.and('have.css', 'background-color', 'rgb(61, 220, 145)')
+				.and('have.css', 'color', 'rgb(19, 35, 34)')
+				.and('have.css', 'border-radius', '4px')
+				.invoke('text')
+				.should('deep.equal', 'Checkout');
 			cy.wrap($el).click();
 		});
 	}
