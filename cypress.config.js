@@ -18,7 +18,7 @@ module.exports = defineConfig({
 		pageLoadTimeout: 15 * 1000,
 		screenshotOnRunFailure: true,
 		trashAssetsBeforeRuns: true,
-		video: false,
+		video: true,
 		reporter: 'cypress-multi-reporters',
 		reporterOptions: {
 			configFile: 'reporter-config.json',
