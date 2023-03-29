@@ -2,8 +2,9 @@ export default class SwagLabsInventoryPage {
 	/**
 	 * Validate that the current URL is the inventory page URL.
 	 */
-	validateInventoryPageUrl() {
+	validatePageUrl() {
 		cy.url().should('deep.equal', `${Cypress.env('sauce_demo_url')}inventory.html`);
+		cy.screenshot('inventory-page');
 	}
 
 	/**

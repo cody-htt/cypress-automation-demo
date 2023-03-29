@@ -48,7 +48,7 @@ And('I go to my cart', () => {
 /** Then Steps Definition */
 Then('I go back to inventory page for shopping', () => {
 	cartPage.clickBtnContShopping();
-	inventoryPage.validateInventoryPageUrl();
+	inventoryPage.validatePageUrl();
 	headerComp.validateCartBadgeIsEmpty();
 });
 
