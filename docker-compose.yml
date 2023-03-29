@@ -1,0 +1,21 @@
+version: '1'
+services:
+  #Run cypress e2e automation test in headless mode using Electron browser
+  e2e-electron-headless:
+    image: 'cypress-java-img:1.0.0'
+    command: 'runAllTestElectron:Headless'
+    volumes:
+      - ./cypress/videos:/cypress-e2e-test/cypress/videos
+      - ./cypress/screenshots:/cypress-e2e-test/cypress/screenshots
+      - ./allure-reports:/cypress-e2e-test/allure-reports
+      - ./mochawesome-report:/cypress-e2e-test/mochawesome-report
+
+  #Run cypress e2e automation test in headless mode using Chrome browser
+  e2e-chrome-headless:
+    image: 'cypress-java-img:1.0.0'
+    command: 'runAllTestChrome:Headless'
+    volumes:
+      - ./cypress/videos:/cypress-e2e-test/cypress/videos
+      - ./cypress/screenshots:/cypress-e2e-test/cypress/screenshots
+      - ./allure-reports:/cypress-e2e-test/allure-reports
+      - ./mochawesome-report:/cypress-e2e-test/mochawesome-report

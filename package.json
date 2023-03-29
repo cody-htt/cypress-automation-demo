@@ -13,8 +13,8 @@
 		"mochawesomeReport:Clean": "rm -rf mochawesome-report/*",
 		"allureReport:Clean": "rm -rf allure-reports/*",
 		"allureReport:Create": "allure generate allure-results --clean -o allure-reports",
-		"runAllTestElectron:Headless": "npm run mochawesomeReport:Clean && allureReport:Clean && npm run testAllElectron:Headless && npm run mochawesomeReport:Create && npm run allureReport:Create",
-		"runAllTestChrome:Headless": "npm run mochawesomeReport:Clean && allureReport:Clean && npm run testAllChrome:Headless && npm run mochawesomeReport:Create && npm run allureReport:Create"
+		"runAllTestElectron:Headless": "npm run mochawesomeReport:Clean && npm run allureReport:Clean && npm run testAllElectron:Headless && npm run mochawesomeReport:Create && npm run allureReport:Create",
+		"runAllTestChrome:Headless": "npm run mochawesomeReport:Clean && npm run allureReport:Clean && npm run testAllChrome:Headless && npm run mochawesomeReport:Create && npm run allureReport:Create"
 	},
 	"author": "Tung Huynh",
 	"license": "ISC",
