@@ -1,22 +1,14 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=200px height=200px src="https://i.imgur.com/6wj0hh6.jpg" alt="Project logo"></a>
+ <img width=260px height=100px src="https://cdn.am-online.com/media/1/root/atg_w268.jpg" alt="Project logo"></a>
 </p>
 
-<h3 align="center">cypress-atg-test</h3>
-
-<div align="center">
-
-[![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![GitHub Issues](https://img.shields.io/github/issues/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/pulls)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
-
-</div>
+<h1 align="center">cypress-atg-test</h1>
 
 ---
 
-<p align="center"> Few lines describing your project.
+<p align="center"> 
+    <strong>Tung Huynh - Cypress automation test project for ATG</strong>
     <br> 
 </p>
 
@@ -24,91 +16,107 @@
 
 - [About](#about)
 - [Getting Started](#getting_started)
-- [Deployment](#deployment)
-- [Usage](#usage)
-- [Built Using](#built_using)
-- [TODO](../TODO.md)
-- [Contributing](../CONTRIBUTING.md)
-- [Authors](#authors)
-- [Acknowledgments](#acknowledgement)
+- [Using DockerFile](#using_dockerfile)
 
 ## 🧐 About <a name = "about"></a>
 
-Write about 1-2 paragraphs describing the purpose of your project.
+This is a Github repository belonging to user "cody-htt" and is named "cypress-atg-test". The
+repository contains code related to testing an application using the Cypress testing framework.
+Specifically, the tests in this repository appear to be related to the Automotive Transformation
+Group (ATG) interview test for QA Engineer position.
+
+The README file of this repository provides more detailed information on how to set up and run the
+tests. Additionally, the repository may contain other relevant files and resources related to the
+testing process.
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for
+development and testing purposes. See [Prerequisites](#prerequisites) and
+[Steps to run cypress test](#steps_to_test) for notes on how to deploy the project on a live system.
 
-### Prerequisites
+<details open>
 
-What things you need to install the software and how to install them.
+<summary>Instruction to executing the test</summary>
+
+### Prerequisites <a name = "prerequisites"></a>
+
+- To use allure-commandline to generate allure-reports, you need to install java 8 at least or
+  higher version. Can follow my below instruction:
+
+  For Windows:
+
+  1. Download the Java 8 installer for Windows from the Oracle website
+     https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html **_(register an
+     oracle account if you don't have one)_**
+  2. Run the installer by double-clicking on the downloaded file.
+  3. Follow the instructions provided by the installer to complete the installation process.
+  4. Verify that Java 8 is installed by opening a Command Prompt and running the following command:
+
+  ```
+  java -version
+  ```
+
+  For MacOS:
+
+  1. Install Homebrew by running the following command in a Terminal window:
+
+  ```
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  ```
+
+  2. Use Homebrew to install Java 8 by running the following command:
+
+  ```
+  brew install openjdk@8
+  ```
+
+  3. Verify that Java 8 is installed by opening a new Terminal window and running the following
+     command:
+
+  ```
+  java -version
+  ```
+
+### Steps to run cypress test <a name = "steps_to_test"></a>
+
+1. Clone the repository using the following command
 
 ```
-Give examples
+git clone https://github.com/cody-htt/cypress-atg-test.git
 ```
 
-### Installing
-
-A step by step series of examples that tell you how to get a development env running.
-
-Say what the step will be
+2. Navigate to the cloned repository using the following command:
 
 ```
-Give the example
+cd cypress-atg-test
 ```
 
-And repeat
+3. Install the necessary dependencies using the following command:
 
 ```
-until finished
+npm install
 ```
 
-End with an example of getting some data out of the system or using it for a little demo.
-
-## 🔧 Running the tests <a name = "tests"></a>
-
-Explain how to run the automated tests for this system.
-
-### Break down into end to end tests
-
-Explain what these tests test and why
+4. Run the tests using the following command:
 
 ```
-Give an example
+npm run runAllTestElectron:Headless
 ```
 
-### And coding style tests
-
-Explain what these tests test and why
+or
 
 ```
-Give an example
+npm run runAllTestElectron:Headed
 ```
 
-## 🎈 Usage <a name="usage"></a>
+5. Open _index.html_ in the allure-reports folder to view the test results or executing the
+   following command under the `cypress-atg-test` folder
 
-Add notes about how to use the system.
+```
+allure open allure-reports
+```
 
-## 🚀 Deployment <a name = "deployment"></a>
+</details>
 
-Add additional notes about how to deploy this on a live system.
-
-## ⛏️ Built Using <a name = "built_using"></a>
-
-- [MongoDB](https://www.mongodb.com/) - Database
-- [Express](https://expressjs.com/) - Server Framework
-- [VueJs](https://vuejs.org/) - Web Framework
-- [NodeJs](https://nodejs.org/en/) - Server Environment
-
-## ✍️ Authors <a name = "authors"></a>
-
-- [@kylelobo](https://github.com/kylelobo) - Idea & Initial work
-
-See also the list of [contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors) who participated in this project.
-
-## 🎉 Acknowledgements <a name = "acknowledgement"></a>
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- References
+## 🐳 Using DockerFile <a name = "using_dockerfile"></a>
