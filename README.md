@@ -235,9 +235,9 @@ docker build -t cypress-java-img:1.0.0 .
 
 **NOTE:**
 
-- You might encounter the following error in case you run the docker container related the to GPU
-  ![gpu_memory_buffer_error](./assets/gpu_memory_buffer_error.png) There is a work-around with this
-  error, kindly add the following argument under the _env_ object in **cypress.config.js**
+- You might encounter the following error in case you run the docker container, which related to the
+  GPU usage. ![gpu_memory_buffer_error](./assets/gpu_memory_buffer_error.png) There is a work-around
+  with this error, kindly add the following argument under the _env_ object in **cypress.config.js**
   ```
   env: {
     ...
