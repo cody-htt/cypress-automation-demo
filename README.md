@@ -29,6 +29,30 @@ The README file of this repository provides more detailed information on how to 
 tests. Additionally, the repository may contain other relevant files and resources related to the
 testing process.
 
+Resource scaffolds out:
+
+```
+assets
+cypress.config.js
+cypress
+   |-- e2e
+   |   |-- features
+   |   |-- steps
+   |-- fixtures
+   |-- support
+   |   |-- commands.js
+   |   |-- e2e.js
+   |   |-- pageObjects
+docker-compose.yml
+Dockerfile
+jsconfig.json
+package-lock.json
+package.json
+reporter-config.json
+.gitignore
+README.md
+```
+
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
 These instructions will get you a copy of the project up and running on your local machine for
