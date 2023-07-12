@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=260px height=100px src="https://cdn.am-online.com/media/1/root/atg_w268.jpg" alt="Project logo"></a>
+ <img width=260px height=100px src="" alt="Project logo"></a>
 </p>
 
 <h1 align="center">cypress-atg-test</h1>
